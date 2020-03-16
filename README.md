@@ -14,13 +14,7 @@ Uses Javascript
 # Run
 
 ```sh
-git clone https://github.com/Ero6067/<repo>.git
-```
-
-Install dependancies
-
-```sh
-npm install github.com/Ero6067/battleship.git
+git clone https://github.com/Ero6067/battleship.git
 ```
 
 Run App
