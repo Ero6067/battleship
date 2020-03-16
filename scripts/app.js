@@ -17,7 +17,6 @@ class App {
 	}
 
 	initScreen() {
-		//creates table using 2 for loops
 		let gameAreaMarkup = '<table id="game-map">';
 
 		for (let r = 0; r < MAX_ROWS; r++) {
@@ -25,11 +24,24 @@ class App {
 
 			for (let c = 0; c < MAX_COLS; c++) {
 				gameAreaMarkup += `<td class="cell" data-row="${r}"
-          data-col="${c}"></td>`;
+		      data-col="${c}"></td>`;
 			}
-			gameAreaMarkup += "<tr>";
 		}
 		gameAreaMarkup += "</table>";
+
+		document.querySelector(".game-container").innerHTML = gameAreaMarkup;
+
+		// let gameAreaMarkup = "";
+
+		// for (let r = 0; r < MAX_ROWS; r++) {
+		// 	gameAreaMarkup += `<div class="cell-row'>`;
+
+		// 	for (let c = 0; c < MAX_COLS; c++) {
+		// 		gameAreaMarkup += `<div class="cell" data-row="${r}"
+		// 	    data-col="${c}"></div></div>`;
+		// 	}
+		// }
+		// // gameAreaMarkup += "</div>";
 
 		document.querySelector(".game-container").innerHTML = gameAreaMarkup;
 	}
