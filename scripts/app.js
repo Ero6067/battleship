@@ -17,31 +17,30 @@ class App {
 	}
 
 	initScreen() {
-		let gameAreaMarkup = '<table id="game-map">';
-
-		for (let r = 0; r < MAX_ROWS; r++) {
-			gameAreaMarkup += "<tr>";
-
-			for (let c = 0; c < MAX_COLS; c++) {
-				gameAreaMarkup += `<td class="cell" data-row="${r}"
-		      data-col="${c}"></td>`;
-			}
-		}
-		gameAreaMarkup += "</table>";
-
-		document.querySelector(".game-container").innerHTML = gameAreaMarkup;
-
-		// let gameAreaMarkup = "";
+		// let gameAreaMarkup = '<table id="game-map">';
 
 		// for (let r = 0; r < MAX_ROWS; r++) {
-		// 	gameAreaMarkup += `<div class="cell-row'>`;
+		// 	gameAreaMarkup += "<tr>";
 
 		// 	for (let c = 0; c < MAX_COLS; c++) {
-		// 		gameAreaMarkup += `<div class="cell" data-row="${r}"
-		// 	    data-col="${c}"></div></div>`;
+		// 		gameAreaMarkup += `<td class="cell" data-row="${r}"
+		//       data-col="${c}"></td>`;
 		// 	}
 		// }
-		// // gameAreaMarkup += "</div>";
+		// gameAreaMarkup += "</table>";
+
+		// document.querySelector(".game-container").innerHTML = gameAreaMarkup;
+
+		let gameAreaMarkup = "";
+
+		for (let r = 0; r < MAX_ROWS; r++) {
+			// gameAreaMarkup += `<div class="cell-row'>`;
+			for (let c = 0; c < MAX_COLS; c++) {
+				gameAreaMarkup += `<div class="cell" data-row="${r}"
+        data-col="${c}"></div>`;
+			}
+		}
+		gameAreaMarkup += "</div>";
 
 		document.querySelector(".game-container").innerHTML = gameAreaMarkup;
 	}
